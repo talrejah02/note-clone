@@ -3,7 +3,7 @@ import { useState , useEffect } from 'react';
 import useFirestore from './hooks/useFirestore';
 import Sidebar from './Sidebar/Sidebar';
 import { Markdown } from './editor/Editor';
-import { Result } from './editor/EditorResult';
+// import { Result } from './editor/EditorResult';
 
 
 function App() {
