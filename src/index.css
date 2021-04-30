@@ -1,4 +1,5 @@
 body {
+  background-color: #EFF2F9;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,28 +21,148 @@ code {
   padding: 0;
 }
 .Sidebar{
-  width: 20%;
-  height: 100vh;
-  border: 1px solid black;
+  margin-left: 1.5rem ;
+  margin-top: 1.5rem;
+  width: 18%;
+ height: 105vh;
+ background-color: #fff;
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+.SidebarItems{
+  position: relative;
 }
 .markdown-div{
-  padding-top: 1rem;
+ margin-top: 1.7rem;
+ margin-right: 1rem;
   width: 75%;
+  display:flex;
+  flex-direction: column;
+  }
+.title{
+  display: flex;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0.2rem;
+}
+.title input{
+  background-color: transparent;
+  font-size: 1.3rem;
+  border: none;
+
 }
 .result{
+  
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 48vh;
-  border: 1px solid black;
+ height: 50%;
+ 
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
 textarea{
+  padding: 0.3rem;
+  border: none;
+  margin-top: 1rem;
   height: 48vh;
   width: 100%;
   resize: none;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+}
+.markdown{
+margin-top: 1rem;
+ overflow: scroll;
+ height: 17rem;
+ background-color: #ffffff;
+ border-radius: 1.2rem;
+ padding: 1rem;
+}
+.svg{
+  
+  height: 1.7rem;
+  width: 1.7rem;
+  
+  stroke: red;
+}
+.svg:hover{
+   stroke: rgb(25, 247, 217);
+}
+.new-input{ 
+  background-color: #e6e1e1;
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+.sidebar-svg{
+  height: 3rem;
+  width: 3rem;
+  background-color: #0F0E17;
+  stroke: #fff; 
 }
 
 
+.del-btn{
+  position: absolute;
+  top:0;
+  right: 0;
+  background-color: transparent;
+  border:none;
+}
+
+.head-text{
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  
+}
+.sidebar-head{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile-text{
+  font-size: 1.2rem;
+  /* margin-left: 1.5rem; */
+}
+.profile{
+  margin-top: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.newbtn{
+ padding: 0.5rem;
+ border: none;
+ border-radius:15px;
+ margin-top: 1.5rem;
+ background-color: #2A273F;
+ color: white;
+ font-size: 1.0rem; 
+}
+ 
+.newbtn:hover{
+  background-color: #0F0E17;
+}
+
+.SidebarItems{
+  border:none;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  padding: 0.2rem; 
+  background-color: #F8F8F8; 
+  box-shadow: 0px 0px 3px 0px #f8f8f8;
+}
+.SidebarItems:hover{
+  background-color: #5C558B;
+  color: white;
+}
+ul{
+ list-style: none;
+ padding: 0;
+}

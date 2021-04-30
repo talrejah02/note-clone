@@ -69,9 +69,12 @@ export const Markdown = (props) => {
     return (
     <div className="markdown-div" >
       <div >
-             <input value={editorNoteTitle} onChange={updateTitle} />
+            <div className="title">
+            <input value={editorNoteTitle} onChange={updateTitle} />
+              
+            </div> 
             <textarea onChange={updateBody} value={editorNoteBody}/> 
-            <Result />
+            <Result editorNoteBody={editorNoteBody} />
 
             </div> 
             

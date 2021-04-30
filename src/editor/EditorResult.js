@@ -3,14 +3,14 @@ import ReactMarkdown from 'react-markdown';
 
 
 export const Result =(props) =>{
-    
+    const{editorNoteBody}=props
  
     return(
-        <div className="result">
-             <div className="result-div">
-                 <ReactMarkdown children="hello" ></ReactMarkdown>
-             </div>
-        </div>
+        
+           
+                 <ReactMarkdown className="markdown" children={editorNoteBody} ></ReactMarkdown>
+            
+       
     )
   
 
