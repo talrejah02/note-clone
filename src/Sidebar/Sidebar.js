@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { projectFirestore  } from '../firebase/config';
 // import useFirestore from '../hooks/useFirestore';
 import firebase from 'firebase/app'
@@ -10,32 +10,31 @@ function Sidebar(props) {
         title: null,
     })
     const { addingnote, title } = newNote;
-    
     const {everyNotes,note,setnote} = props
-    
-    
-    // const {everyNotes} = useFirestore('notes');
     
     function CreateNewNote() {
         setnewNote({...newNote, addingnote: !addingnote })
         
     }
 
-    function addNewNote(e) {
+     async function  addNewNote (e) {
         e.preventDefault()
-        projectFirestore
+       projectFirestore
         .collection(`/notes`)
         .add({
           title: title,
           body: "",
           createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         });
+        
+       
         setnewNote({...newNote, addingnote: false, title: null })
         setnote({
             ...note,
             selectedNoteIndex: 0,
             selectedNote: null,
         })
+   
     }
 
     function updateTitle(e) {
@@ -52,6 +51,11 @@ function Sidebar(props) {
         .collection(`notes`)
         .doc(dnote.id)
         .delete();
+        setnote({
+            ...note,
+            selectedNoteIndex: 0,
+            selectedNote: null,
+        })
 
     }
     return ( 

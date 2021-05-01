@@ -14,7 +14,8 @@ export const Markdown = (props) => {
     const [editorNoteTitle, setEditorNoteTitle] = useState(note.selectedNote.title);
     const [editorNoteBody, setEditorNoteBody] = useState(note.selectedNote.body);
     const [handler,sethandler] = useState();
-      
+        
+     
       const updateBody = (e) => {
         setEditorNoteBody(e.target.value);
       };
